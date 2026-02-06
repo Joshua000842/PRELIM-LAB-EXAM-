@@ -1,0 +1,169 @@
+/* ---------- Base Theme ---------- */
+:root {
+  --font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --bg-color: #2f261d;        /* deep brown */
+  --text-color: #8b5c09;      /* cream */
+  --primary-color: #caa26a;   /* warm gold-brown */
+  --secondary-color: #ac7517; /* darker gold for text */
+  --accent-color: #ddA52B;    /* brighter gold for highlights */
+  --card-bg: #3b2f22;         /* slightly lighter brown for cards */
+  --hover-bg: #46382b;        /* hover color */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  line-height: 1.6;
+  font-weight: 400;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---------- Typography ---------- */
+h1 {
+  color: rgb(255, 175, 2);
+  font-weight: 700;
+}
+
+h2 {
+  color: rgb(245, 168, 2);
+  font-weight: 700;
+}
+
+h3, h4, h5 {
+  color: #cf920e;
+  font-weight: 600;
+}
+
+p {
+  color: var(--secondary-color);
+}
+
+/* ---------- Links ---------- */
+a {
+  color: var(--primary-color);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Buttons ---------- */
+button {
+  border-radius: 6px;
+  border: 1px solid #44290d;
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+  font-weight: 600;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--accent-color);
+  color: var(--text-color);
+}
+
+/* ---------- Layout ---------- */
+.app-shell {
+  display: grid;
+  grid-template-columns: 260px 1fr 300px;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: #3b2f22;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #6a543d;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--primary-color);
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  color: var(--text-color);
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+  background-color: var(--hover-bg);
+}
+
+.nav-link.active {
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+}
+
+/* Sidebar footer */
+.sidebar-footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 20px;
+  color: var(--text-color);
+}
+
+.avatar {
+  border-radius: 50%;
+}
+
+/* Main Content */
+.main {
+  padding: 30px;
+}
+
+/* Rightbar */
+.rightbar {
+  padding: 20px;
+  background-color: #3b2f22;
+  border-left: 1px solid #6a543d;
+}
+
+.card {
+  background-color: var(--card-bg);
+  padding: 16px;
+  border-radius: 14px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+  color: var(--text-color);
+}
+
+.card.highlight {
+  background: linear-gradient(135deg, #5c452e, #7a5c37);
+}
